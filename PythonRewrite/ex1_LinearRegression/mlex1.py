@@ -76,11 +76,7 @@ def gradDesc(alpha, runs, startTheta):
 		for i in range(0, m):
 			save[i] = h(theta, X[i]) - Y[i]
 		for j in range(0, n + 1):
-			# if ((len(np.transpose(save)) != m) | (len(X[:, j]) != m)):
-				# print(str(len(np.transpose(save))) + " " + str(len(X[:, j])))
-			# # print(save); print(X[:, j])
 			theta[j] -= (alpha / m) * np.dot(np.transpose(save), X[:, j])
-		# print("---------")
 		
 readData(); featNorm()
 
